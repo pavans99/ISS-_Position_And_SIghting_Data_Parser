@@ -109,6 +109,7 @@ to execute the unit tests.
 
 <h2>Some notes about the Dockerfile and downloading the data</h2>
 There are two Dockerfiles present in the repository, Dockerfile and Dockerfile2. Dockerfile is the only one being used in the current configuration. Dockerfile runs ADD commands for both files, then downloads and containerizes them automatically. This Dockerfile conforms to the criteria that the Dockerfile should containerize the datasets. However, the function read_data_from_file_into_dict contains routines to download the data and write the data to files. Therefore the ADD commands and subsequent containerization are not actually necessary and only included to satisfy assignment requirements. Dockerfile2 does not contain commands to download and containerize the data, but it will function properly and return identical outputs to the application built using Dockerfile. In both cases the user does not have to do anything to download the data. However if one wishes to download the position and sighting data themselves then they can run the commands
+
 	wget https://nasa-public-data.s3.amazonaws.com/iss-coords/2022-02-13/ISS_OEM/ISS.OEM_J2K_EPH.xml
 	wget https://nasa-public-data.s3.amazonaws.com/iss-coords/2022-02-13/ISS_sightings/XMLsightingData_citiesUSA09.xml
 
