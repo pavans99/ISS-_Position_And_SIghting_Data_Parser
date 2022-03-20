@@ -95,7 +95,7 @@ Move into the repositroy directory and run the command
 	make
 
 Then the image will be built, and the Flask application will start automatically. Queries can be made to the application using commands of the format specified in the functions section.
-Alternatively, one can build and run the image manually. Inside the same directroy, instead run the commands
+Alternatively, one can build and run the image manually. Inside the same directory, instead run the commands
 
 	docker build -t pavanshukla99/midterm:latest .
 	docker run --name "midterm_container" -d -p 5030:5000 pavanshukla99/midterm:latest
