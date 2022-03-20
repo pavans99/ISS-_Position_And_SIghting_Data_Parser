@@ -214,7 +214,7 @@ def city_data() -> str:
     return 'City data:\n' +'\n'.join(x) +'\n'
 @app.route('/',methods=['GET'])
 def userguide() -> str:
-    return 'Once the image is running, type the command: localhost:5030/(input here). Some simple inputs are: countries, epochs, Austin. These are just a few examples. Refer to the README or the writeup for more detailed information.'
+    return 'Once the image is running, type the command: localhost:5030/(input here).\n Some simple inputs are: countries, epochs, Austin.\n These are just a few examples. Refer to the README or the writeup for more detailed information.'
 
 
 

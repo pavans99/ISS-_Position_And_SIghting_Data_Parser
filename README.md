@@ -39,8 +39,10 @@ This function returns all data associated with a specified region in the sightin
 <h3>get_cities</h3>
 This function returns all cities associated with a specified country and region in the sighting data. An example command to access this function route is
 
-        curl localhost:5030/cities/?country=United_States&region=Texas
+        curl -i "localhost:5030/cities/?country=United_States&region=Texas"
 
+Its format is slightly different from other commands since this url accepts two routes from the user specifiying country and region.
+ 
 <h3>city_data</h3>
 This function returns all data associated with a specified city in the sighting data. An example command to access this function route is
 
@@ -67,11 +69,14 @@ Output is printed to the terminal. Each piece of data is printed to a new line. 
 	utc_time:11:28
 	utc_date:Feb 22, 2022
 
+All data is printed sequentially as it appears in the xml file. Text before the colon indicates a value key and text after the colon indicates the key value. 
+
 Example output for the command given for print_countries is
 
 	All countries:
 	United_States
 
+At the very top of each output is a label indicating what type of data is returned. In this example the list of countries in the sighting data is returned so "All countries:" is printed. On each subsequent line data conforming to the query parameter is printed. Repeated values such as the same country or region when returning a list of all countries or regions are not printed. For example, even though "United_States" appears many times in the sighting data, it is only printed once. However, as in the example for city_data, country or region data may be repeated when it is referenced in the context of each specific sighting case. 
 
 <h2>Instructions for Running</h2>
 <h4>Pulling and Running the Image</h4>
