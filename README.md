@@ -86,7 +86,7 @@ The image is pulled using one command:
 
 The image can be run using the command
 
-	docker run --name "testing" -d -p 5030:5000 pavanshukla99/midterm:latest
+	docker run --name "midterm_container" -d -p 5030:5000 pavanshukla99/midterm:latest
 
 Then queries can be made to the server using commands of the format specified in the functions section.  
 
