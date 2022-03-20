@@ -53,7 +53,7 @@ This function returns some example commands to help the user get started. The fu
 
 	curl localhost:5030/
 
-<h3>Example Outputs</h3>
+<h2>Example Outputs</h2>
 Output is printed to the terminal. Each piece of data is printed to a new line. A portion of the output for the command given for city_data is
 
 	country:United_States
