@@ -49,4 +49,7 @@ def test_city_data(client):
     resp = client.get('/cities/data/?city=Austin')
     assert b'Texas' in resp.data
 
+def test_userguide(client):
+    resp = client.get('/')
+    assert b'Once' in resp.data
 pytest.main()
